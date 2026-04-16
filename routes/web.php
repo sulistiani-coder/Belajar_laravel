@@ -72,4 +72,4 @@ Route::get('/redirect-dashboard', function () {
 
 Route::resource('products', \App\Http\Controllers\ProductController::class);
 Route::resource('orders', \App\Http\Controllers\OrderController::class);
-Route::resource('posts', \App\Http\Controllers\PostController::class);
+Route::resource('posts', \App\Http\Controllers\PostController::class); 
