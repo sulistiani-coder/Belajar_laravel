@@ -15,7 +15,7 @@
                     @foreach($posts as $post)
                         <div style="border: 1px solid #ddd; padding: 15px; margin: 10px 0; border-radius: 5px;">
                             <h4><a href="#" style="text-decoration: none; color: #007bff;">{{ $post->title }}</a></h4>
-                            <p>{{ Str::limit($post->content, 150) }}</p>
+                            <p>{{ strlen($post->content) > 150 ? substr($post->content, 0, 150) . "..." : $post->content }}</p>
                             <small style="color: #666;">Created: {{ $post->created_at->format(''d M Y'') }}</small>
                         </div>
                     @endforeach
@@ -29,7 +29,7 @@
                     @foreach($products as $product)
                         <div style="border: 1px solid #ddd; padding: 15px; margin: 10px 0; border-radius: 5px;">
                             <h4><a href="#" style="text-decoration: none; color: #007bff;">{{ $product->name }}</a></h4>
-                            <p>{{ Str::limit($product->description, 150) }}</p>
+                            <p>{{ strlen($product->description) > 150 ? substr($product->description, 0, 150) . "..." : $product->description }}</p>
                             <p><strong>Price: Rp {{ number_format($product->price, 0, '''', ''.'') }}</strong></p>
                             <small style="color: #666;">Created: {{ $product->created_at->format(''d M Y'') }}</small>
                         </div>
@@ -50,3 +50,4 @@
         </div>
     @endif
 @endsection
+
