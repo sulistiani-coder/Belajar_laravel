@@ -100,3 +100,10 @@ Route::get('/latihan1', function () {
 });
 
 Route::get('/users', [App\Http\Controllers\UserController::class, 'users']);
+
+
+// Laravel Blade Learning Routes
+Route::get('/greeting', [App\Http\Controllers\LearnController::class, 'greeting'])->name('greeting');
+Route::get('/daftar-siswa', [App\Http\Controllers\LearnController::class, 'daftarSiswa'])->name('daftar-siswa');
+Route::get('/dashboard/profile', [App\Http\Controllers\LearnController::class, 'profile'])->name('dashboard.profile');
+Route::get('/hasil-ujian/{nilai?}', [App\Http\Controllers\LearnController::class, 'hasilUjian'])->name('hasil-ujian');

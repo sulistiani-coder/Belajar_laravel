@@ -8,21 +8,13 @@
 <body>
     <header>
         <h1>Website Laravel</h1>
-        <nav>
-            <a href="/">Home</a> | <a href="/about">Tentang</a>
-        </nav>
-    </header>
-    <header>
-        <h1>Website Laravel</h1>
         @include('partials.navbar')
     </header>
 
     <main>
         @yield('content')   
     </main>
-    <footer>
-        <p>&copy; 2026 Laravel App.</p>
-    </footer>
+    @include('partials.footer')
 </body>
     @stack('scripts')
 </body>
