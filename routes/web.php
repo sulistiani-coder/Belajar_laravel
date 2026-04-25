@@ -76,7 +76,7 @@ Route::resource('orders', \App\Http\Controllers\OrderController::class);
 
 Route::resource('posts', \App\Http\Controllers\PostController::class); 
 
-Route::get('/search', [\App\Http\Controllers\SearchController::class, 'index'])->name('search');
+Route::get('/search', [\App\Http\Controllers\SearchController::class, 'index'])->name('search.index');
 
 Route::get('/search/results', [\App\Http\Controllers\SearchController::class, 'results'])->name('search.results');
 
@@ -101,9 +101,69 @@ Route::get('/latihan1', function () {
 
 Route::get('/users', [App\Http\Controllers\UserController::class, 'users']);
 
-
 // Laravel Blade Learning Routes
 Route::get('/greeting', [App\Http\Controllers\LearnController::class, 'greeting'])->name('greeting');
+
 Route::get('/daftar-siswa', [App\Http\Controllers\LearnController::class, 'daftarSiswa'])->name('daftar-siswa');
+
 Route::get('/dashboard/profile', [App\Http\Controllers\LearnController::class, 'profile'])->name('dashboard.profile');
+
 Route::get('/hasil-ujian/{nilai?}', [App\Http\Controllers\LearnController::class, 'hasilUjian'])->name('hasil-ujian');
+
+Route::get('/products', [App\Http\Controllers\LearnController::class, 'products'])->name('products');
+
+Route::get('/posts', [App\Http\Controllers\LearnController::class, 'posts'])->name('posts');
+
+Route::get('/conditional', [App\Http\Controllers\LearnController::class, 'conditional'])->name('conditional');
+
+Route::get('/looping', [App\Http\Controllers\LearnController::class, 'looping'])->name('looping');
+
+Route::get('/components', [App\Http\Controllers\LearnController::class, 'components'])->name('components');
+
+Route::get('/layout', [App\Http\Controllers\LearnController::class, 'layout'])->name('layout');
+
+Route::get('/data-passing', [App\Http\Controllers\LearnController::class, 'dataPassing'])->name('data-passing');
+
+Route::get('/form', [App\Http\Controllers\LearnController::class, 'form'])->name('form');
+
+Route::post('/submit-form', [App\Http\Controllers\LearnController::class, 'submitForm'])->name('submit-form');
+
+Route::get('/validation', [App\Http\Controllers\LearnController::class, 'validation'])->name('validation');
+
+Route::post('/submit-validation', [App\Http\Controllers\LearnController::class, 'submitValidation'])->name('submit-validation');
+
+Route::get('/search-results', [App\Http\Controllers\LearnController::class, 'searchResults'])->name('search-results');
+
+Route::get('/pagination', [App\Http\Controllers\LearnController::class, 'pagination'])->name('pagination');
+
+Route::get('/eloquent', [App\Http\Controllers\LearnController::class, 'eloquent'])->name('eloquent');
+
+Route::get('/relationships', [App\Http\Controllers\LearnController::class, 'relationships'])->name('relationships');
+
+Route::get('/accessors-mutators', [App\Http\Controllers\LearnController::class, 'accessorsMutators'])->name('accessors-mutators');
+
+Route::get('/query-scopes', [App\Http\Controllers\LearnController::class, 'queryScopes'])->name('query-scopes');
+
+Route::get('/events', [App\Http\Controllers\LearnController::class, 'events'])->name('events');
+
+Route::get('/listeners', [App\Http\Controllers\LearnController::class, 'listeners'])->name('listeners');
+
+Route::get('/middleware', [App\Http\Controllers\LearnController::class, 'middleware'])->name('middleware');
+
+Route::get('/api', [App\Http\Controllers\LearnController::class, 'api'])->name('api');
+
+Route::get('/testing', [App\Http\Controllers\LearnController::class, 'testing'])->name('testing');
+
+Route::get('/deployment', [App\Http\Controllers\LearnController::class, 'deployment'])->name('deployment');
+
+Route::get('/security', [App\Http\Controllers\LearnController::class, 'security'])->name('security');
+
+Route::get('/performance', [App\Http\Controllers\LearnController::class, 'performance'])->name('performance');
+
+Route::get('/caching', [App\Http\Controllers\LearnController::class, 'caching'])->name('caching');
+
+Route::get('/queues', [App\Http\Controllers\LearnController::class, 'queues'])->name('queues');
+
+Route::get('/notifications', [App\Http\Controllers\LearnController::class, 'notifications'])->name('notifications');
+
+Route::get('/broadcasting', [App\Http\Controllers\LearnController::class, 'broadcasting'])->name('broadcasting');
